@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<div class="cv">
+
+    {{ range .Params.sections }}
+    <h2>{{ index . "title" }}</h2>
+    <div>
+        {{ $section := index . "title" }}
+        {{ if eq $section "Education" }}
+        {{ range index . "entries" }}
+            <h3 class="seventy-five">{{ index . "school" }}</h3>
+            <h5 class="courier">{{ index . "city" }}</h5>
+            <h4 class="seventy-five">{{ index . "certification" }}</h4>
+            <h5 class="courier">{{ index . "date" }}</h5>
+        {{ end }}
+        {{ end }} 
+
+        {{ if eq $section "Skills" }}
+        {{ range index . "entries" }}
+            <h3 class="twenty-five">{{ index . "skill" }}</h3>
+            <h5 class="seventy-five courier">{{ index . "description" }}</h5>
+        {{ end }}
+        {{ end }}
+
+        {{ if eq $section "Experience" }}
+        {{ range index . "entries" }}
+            <h3 class="seventy-five">{{ index . "company" }}</h3>
+            <h5 class="courier">{{ index . "city" }}</h5>
+            <h4 class="seventy-five">{{ index . "job" }}</h4>
+            <h5 class="courier">{{ index . "date" }}</h5>
+            <ul>
+                {{ range index . "description" }}
+                    <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        {{ end }}
+        {{ end }}
+
+        {{ if eq $section "Extracurriculars" }}
+        {{ range index . "entries" }}
+            <h3 class="twenty-five">{{ index . "date" }}</h3>
+            <h5 class="seventy-five courier">{{ index . "description" }}</h5>
+        {{ end }}
+        {{ end }}
+    </div>
+    <div class="split-section"></div>
+    {{ end }}
+
+    
+</div>
+
+{{ end }}
