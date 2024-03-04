@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://k-m-crawford.onrender.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'KM Crawford'
 disableKinds = ['taxonomy', 'term']
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files
