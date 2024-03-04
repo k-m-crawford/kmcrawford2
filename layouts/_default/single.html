@@ -1,5 +1,8 @@
 {{ define "main" }}
-    <div class="max-w-screen-xl flex flex-wrap justify-between mx-auto px-4 font-gill-sans">
+    {{ if not (eq .Title "About") }}
+        <div class="mx-auto justify-center text-center font-franklin-gothic text-gray-700 font-bold text-2xl">{{ upper .Title }}</div>
+    {{ end }}
+    <div class="max-w-screen-xl flex flex-wrap flex-col justify-between mx-auto px-4 font-gill-sans space-y-3">
         {{ .Content }}
     </div>
 {{ end }}

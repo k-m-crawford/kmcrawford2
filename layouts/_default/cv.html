@@ -1,52 +1,50 @@
 {{ define "main" }}
 
-<div class="cv">
+<div class="max-w-screen-xl flex flex-col mx-auto px-4 font-gill-sans">
 
-    {{ range .Params.sections }}
-    <h2>{{ index . "title" }}</h2>
-    <div>
-        {{ $section := index . "title" }}
-        {{ if eq $section "Education" }}
-        {{ range index . "entries" }}
-            <h3 class="seventy-five">{{ index . "school" }}</h3>
-            <h5 class="courier">{{ index . "city" }}</h5>
-            <h4 class="seventy-five">{{ index . "certification" }}</h4>
-            <h5 class="courier">{{ index . "date" }}</h5>
-        {{ end }}
-        {{ end }} 
-
-        {{ if eq $section "Skills" }}
-        {{ range index . "entries" }}
-            <h3 class="twenty-five">{{ index . "skill" }}</h3>
-            <h5 class="seventy-five courier">{{ index . "description" }}</h5>
-        {{ end }}
+{{ range .Params.sections }}
+    <div class="flex flex-col mb-4">
+        <h1 class="text-xl font-bold font-franklin-gothic text-teal-700">{{ upper .header }}</h1>
+        
+        {{ $mbx := 4 }}
+        {{ if eq .header "Extracurriculars" }}
+            {{ $mbx = 0 }}
         {{ end }}
 
-        {{ if eq $section "Experience" }}
-        {{ range index . "entries" }}
-            <h3 class="seventy-five">{{ index . "company" }}</h3>
-            <h5 class="courier">{{ index . "city" }}</h5>
-            <h4 class="seventy-five">{{ index . "job" }}</h4>
-            <h5 class="courier">{{ index . "date" }}</h5>
-            <ul>
-                {{ range index . "description" }}
-                    <li>{{ . }}</li>
+        <div class="flex flex-col mb-{{$mbx}}">
+        {{ if eq .header "Skills" }}
+            {{ range .details }}
+            <div class="flex flex-col justify-between text-gray-600 mb-2">
+                <span class="font-bold">{{ upper .name }}</span>
+                <span>{{ .duties }}</span>
+            </div>
+            {{ end }}    
+        {{ else }}
+            {{ range .details }}
+                <div class="flex md:flex-row flex-col justify-between text-gray-600">
+                    <span class="font-bold">{{ upper .subtitle }}</span>
+                    <span>{{ .location }}</span>
+                </div>
+                <div class="flex md:flex-row flex-col justify-between text-gray-600">
+                    <span class="">{{ .name }}</span>
+                    <span>{{ .date }}</span>
+                </div>
+                {{ if .duties }}
+                <ul class="p-2 list-disc list-inside lg:max-w-4xl lg:justify-center">
+                    {{ range .duties }}
+                    <li class="pb-1">
+                        <span class="text-gray-900">{{ . }}</span>
+                    </li>
+                    {{ end }}
+                </ul>
                 {{ end }}
-            </ul>
+            {{ end }}
         {{ end }}
-        {{ end }}
+        </div>
 
-        {{ if eq $section "Extracurriculars" }}
-        {{ range index . "entries" }}
-            <h3 class="twenty-five">{{ index . "date" }}</h3>
-            <h5 class="seventy-five courier">{{ index . "description" }}</h5>
-        {{ end }}
-        {{ end }}
     </div>
-    <div class="split-section"></div>
-    {{ end }}
+{{ end }}
 
-    
 </div>
 
 {{ end }}
