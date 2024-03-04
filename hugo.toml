@@ -1,4 +1,4 @@
-baseURL = 'https://k-m-crawford.onrender.com/'
+baseURL = 'http://kmcrawford.com/'
 languageCode = 'en-us'
 title = 'KM Crawford'
 disableKinds = ['taxonomy', 'term']
