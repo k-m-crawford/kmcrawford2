@@ -16,7 +16,7 @@
             {{ range .details }}
             <div class="flex flex-col justify-between text-gray-600 mb-2">
                 <span class="font-bold">{{ upper .name }}</span>
-                <span>{{ .duties }}</span>
+                <span>{{ .duties | markdownify }}</span>
             </div>
             {{ end }}    
         {{ else }}
@@ -33,7 +33,7 @@
                 <ul class="p-2 list-disc list-inside lg:max-w-4xl lg:justify-center">
                     {{ range .duties }}
                     <li class="pb-1">
-                        <span class="text-gray-900">{{ . }}</span>
+                        <span class="text-gray-900">{{ . | markdownify  }}</span>
                     </li>
                     {{ end }}
                 </ul>

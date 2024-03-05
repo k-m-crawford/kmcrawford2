@@ -5,6 +5,7 @@ tools:
     - Godot
 blurb: A small prototype for an unnamed action RPG with programmable AI for allies and enemies.
 header: /projects/game-prototypes/gambit/images/2.png
+weight: 20
 ---
 
  <video class="self-center" controls>

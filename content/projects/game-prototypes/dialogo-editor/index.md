@@ -5,6 +5,7 @@ tools:
     - Godot
 blurb: A custom editor extension for Godot for creating dialogue bundles.
 header: /projects/game-prototypes/dialogo-editor/images/0.png
+weight: 30
 ---
 
 A dialogue editor created as an extension for **Godot** for creating complex, branching dialogue bundles that can fire signals, modify variables, and more. 

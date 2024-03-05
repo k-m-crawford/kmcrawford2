@@ -2,6 +2,7 @@
 draft: false
 title: React Typewriter
 tools: 
+    - React
     - Node.js
 blurb: A small npm module for scraping lyrics from genius.org for natural language processing and other applications.
 # header: /projects/fullstack/athena-learning/images/headerimage.png
@@ -15,4 +16,4 @@ The npm bundle provides various React components such as the text **Typewriter**
 
 See **more information on [github](https://github.com/k-m-crawford/react-typewriter-component)**.
 
-See an extensive, gamified demo of the component used to create a text adventure prototype [here](https://k-m-crawford.github.io/react-text-adventure).
+See an extensive, gamified demo of the component used to create a text adventure prototype **[here](https://k-m-crawford.github.io/react-text-adventure).** The demo includes examples of support **in-line CSS, dynamic content pulled from things such as Reddit's API, branching narratives, and an internal stat system that can open new branches depending on previous choices.** Note the demo is unfinished, and will eventually stop progressing. 

@@ -5,6 +5,7 @@ tools:
     - Godot
 blurb: A small prototype for an HD2D RPG overworld system.
 header: /projects/game-prototypes/hd2d/images/1.png
+weight: 1
 ---
 
  <video class="self-center" controls>

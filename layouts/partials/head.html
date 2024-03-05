@@ -4,15 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kelly Crawford, Software Engineer</title>
     <link rel="stylesheet" href="{{ "style.css" | relURL }}" />
+    <script src="https://kit.fontawesome.com/fd1bee3a3c.js" crossorigin="anonymous"></script>
     
     <script>
-        function ShowMenu() {
-            var el = document.getElementById("navbar-drop");
+        const ShowMenu = () => {
+            const el = document.getElementById("navbar-drop")
             if(el.classList.contains("hidden")) {
-                el.classList.remove("hidden");
+                el.classList.remove("hidden")
             }
             else {
-                el.classList.add("hidden");
+                el.classList.add("hidden")
             }
         }
     </script>

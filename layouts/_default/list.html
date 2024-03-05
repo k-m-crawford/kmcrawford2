@@ -18,8 +18,10 @@
             </div> 
             
             <div class="max-w rounded overflow-hidden bg-teal-700 {{ .Params.headercolor }} {{ .Params.headerpadding }} h-48 group-hover:saturate-0 ">
-                <img src="{{ .Params.header }}"
-                class="group-hover:saturate-0 object-fill w-full h-48" />
+                {{ if isset .Params "header" }}
+                    <img src="{{ .Params.header }}"
+                    class="group-hover:saturate-0 object-fill w-full h-48" />
+                {{ end }}    
             </div>
             
             <div>

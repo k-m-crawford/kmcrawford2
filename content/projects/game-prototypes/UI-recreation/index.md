@@ -1,6 +1,6 @@
 ---
 draft: false
-title: RPG Menu UI Prototype
+title: RPG Menu UI
 tools: 
     - Godot
 blurb: A 1:1 recreation of menus from Final Fantasy 8 as proof-of-concept for data-driven menu system.

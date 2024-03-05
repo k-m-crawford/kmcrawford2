@@ -5,6 +5,7 @@ tools:
     - Unreal Engine 5
 blurb: A small proof-of-concept for horror enemy AI.
 header: /projects/game-prototypes/horror-ai/images/0.png
+weight: 10
 ---
 
  <video class="self-center" controls>
