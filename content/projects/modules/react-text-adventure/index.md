@@ -4,7 +4,7 @@ title: React Typewriter
 tools: 
     - React
     - Node.js
-blurb: A small npm module for scraping lyrics from genius.org for natural language processing and other applications.
+blurb: A set of components built for React that can be used to create animated text, and text adventure-style browser games.
 # header: /projects/fullstack/athena-learning/images/headerimage.png
 ---
 
